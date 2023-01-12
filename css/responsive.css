@@ -263,7 +263,8 @@ width: 30%;
 }
 
 .bg-light {
-    background-color: #0c0116!important;
+    background: -webkit-gradient(linear, left top, right top, from(#1e9300), to(#adad06));
+    background: linear-gradient(to right, #1e9300, #adad06);
     width: 50%;
 }
 .out_shop_bt { width: 60%;}
@@ -343,7 +344,8 @@ width: 55%;
 }
 
 .bg-light {
-    background-color: #0c0116!important;
+    background: -webkit-gradient(linear, left top, right top, from(#1e9300), to(#adad06));
+    background: linear-gradient(to right, #1e9300, #adad06);
     width: 50%;
 }
 
@@ -442,7 +444,7 @@ ul.link li {
 .mens_taital { display: none; }
 .mens_taital_2 { display: none; }
 .page_no { display: none;}
-.bg-light { background-color: #db5660!important;  }
+.bg-light { background-color: #156400 !important;  }
 .header_section { background-size: cover;}
 .header_section { background-size: cover; background-repeat: no-repeat;}
 .buy_text { width: 100%; }
