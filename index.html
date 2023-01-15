@@ -70,12 +70,6 @@
                 <li data-target="#myCarousel" data-slide-to="2"></li>
                 <li data-target="#myCarousel" data-slide-to="3"></li>
             </ol>
-			<div class="col-sm-5">
-			<label class="switch">
-				<input onclick="myFunction()" type="checkbox" checked>
-				<span class="slider round"></span>
-				</label></div>
-
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -170,8 +164,16 @@
 	</div>
 	<!-- header section end -->
 	<!-- new collection section start -->
+
     <div class="layout_padding collection_section">
     	<div class="container">
+			<div class="btn-container">
+				<i class="fa fa-sun-o" aria-hidden="true"></i>
+				  <label class="switch btn-color-mode-switch">
+						<input type="checkbox" name="color_mode" id="color_mode" value="1">
+						<label for="color_mode" data-on="Dark" data-off="Light" class="btn-color-mode-switch-inner"></label>
+					</label>
+				  <i class="fa fa-moon-o" aria-hidden="true"></i>
     	    <h1 class="new_text"><strong>Accessory</strong></h1>
     	    <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
     	    <div class="collection_section_2">
@@ -435,9 +437,21 @@
       <script src="js/owl.carousel.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 	  <script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
+$(document).ready(function() {
+    $("#color_mode").on("change", function () {
+        colorModePreview(this);
+    })
+});
+
+function colorModePreview(ele) {
+    if($(ele).prop("checked") == true){
+        $('body').addClass('dark-preview');
+        $('body').removeClass('white-preview');
+    }
+    else if($(ele).prop("checked") == false){
+        $('body').addClass('white-preview');
+        $('body').removeClass('dark-preview');
+    }
 }
 </script>
       <script>
